@@ -1,0 +1,92 @@
+<h1>Welcome to {{title}}
+  </h1>
+  <h5>{{Message}}</h5>
+  <app-archana (childEvent) ="Message=$event"[parentData]="Name"></app-archana>
+  <app-student-list></app-student-list>
+  <app-student-detail></app-student-detail>
+ <!-- <div class="" [class.class-info]="isRecording">
+  Hello World</div>  -->
+
+   <!-- <div class="" [class.class-info]="isRecording == true">Hello World</div>  -->
+  <!-- <div [ngClass]="{'class-info font-large':isRecording == true}">Large Text</div>  -->
+
+ <!-- <div [ngClass]="{'class-info font-large': isRecording ,'border-success':isbool}">
+    Large Text</div> -->
+
+    <!-- <div [ngClass]="isRecording == 'true' ? 'class-info' : 'class-info font-large'">
+      Large Text</div> -->
+
+     <!--  <div class="" [class.class-info]="isReturn()" [style.background]="isReturn() ? 'black' : 'red'">
+        Hello World
+      </div>
+
+      <div [ngClass]="getValidateClass()"> Large Text</div> -->
+
+      <!-- <div [ngClass]="{'class-info border-success':true}" [ngStyle]="{'background-color':isbool ? 'orange' :'yellow'}">
+
+      New Success</div> -->
+      <!-- <div [ngClass]="{'class-info border-success':false}" [ngStyle]="styleFun()">New Success</div> -->
+
+      <!-- <div [ngClass]="{'class-info border-success':true}">New Success</div> -->
+
+       <!-- <input type="text" name="name" id="id" [disabled]="isbool"> 
+       <button [disabled]="isbool">Disabled</button>
+       <select>select any city
+       <option [selected] ="isbool">Ctc</option>
+       <option [selected] ="isbool">Bbsr</option>
+      </select>
+      <input type="checkbox" name="name" id="id" [checked]="isRecording"> -->
+
+      <input type="text" name="name" id="id" (change)="onChangeInput($event)">
+       <button (click)="toggleEvents()">Toggle</button> 
+      
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="name">Enter Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Enter Name" [(ngModel)]="title">
+            </div>
+            <button class="btn btn-success" (click)="ChangeName">Change Name</button>
+          </div>
+          <div class="col-md-12">
+            {{title}}
+            </div>
+        </div>
+      </div>
+
+      <h5 *ngIf="true">Sambit</h5>
+      <ng-container *ngIf="isbool; else elseTemplate">
+        <h5>{{title}}</h5>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <h5>else part</h5>
+      </ng-template>
+      
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">picked Red</div>
+  <div *ngSwitchCase="'blue'">picked Blue</div>
+  <div *ngSwitchDefault>picked Again</div>
+</div>
+
+<div *ngFor="let color of colors; index as i;odd as o;let l= last">
+  <h5> {{color}} {{i}} {{o}} {{l}}</h5>
+ 
+</div>
+<h5>{{title | lowercase}}</h5> 
+<h5>{{title | uppercase}}</h5> 
+<h5>{{message | titlecase}}</h5>
+<h5>{{title | slice:2:6}}</h5>
+<h5>{{person | json}}</h5> 
+<h5>{{5.678 | number:'1.2-3'}}</h5> 
+<h5>{{5.678 | number:'3.4-5'}}</h5> 
+<h5>{{5.678 | number:'3.1-2'}}</h5>
+<h5>{{0.25 | percent}}</h5>  
+<h5>{{0.25 | currency}}</h5> 
+<h5>{{0.25 | currency:'EUR':'code'}}</h5>
+<h5>{{date}}</h5>
+<h5>{{date |date:'shortDate'}}</h5>
+<h5>{{date |date:'shortTime'}}</h5>
+<h5>{{date |date:'short'}}</h5>
+

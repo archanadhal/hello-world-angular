@@ -1,0 +1,17 @@
+.class-info{
+    color: pink;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.font-large{
+    color: rebeccapurple;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+}
+.border-success{
+    background-color: royalblue;
+    color: white;
+}
